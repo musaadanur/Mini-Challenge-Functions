@@ -33,18 +33,28 @@ console.log(sayHello("Alice")); // Merhaba, Alice!
 
 */
 
-// Callback (Function as a Parameter)
-function process(callback) {
-    console.log("İşlem başlıyor...");
-    callback(); // Parametre olarak alınan fonksiyon çağrılıyor
-}
-function done() {
-    console.log("İşlem tamamlandı!");
-}
-process(done);
+/*
+//Rest Parameter
+//fonksiyona verilen birden fazla argümanı 
+//tek bir diziye toplamanızı sağlar
 
-//setTimeout ile Callback Kullanımı
-setTimeout(() => {
-    console.log("Bu mesaj 2 saniye sonra görünecek.");
-}, 2000);
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
+}
 
+console.log(sum(1, 2, 3));   // Çıktı: 6
+console.log(sum(10, 20, 30)); // Çıktı: 60
+*/
+
+/*
+//Predicate Function
+const isEven = (num) => num % 2 === 0;
+
+console.log(isEven(4)); // true
+console.log(isEven(7)); // false
+
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(isEven);
+
+console.log(evenNumbers); // [2, 4, 6]
+*/

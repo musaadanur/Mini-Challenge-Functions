@@ -8,6 +8,6 @@ function selectColor(number) {
     return colors[index];
 }
 
-console.log(selectColor(11)); // bordo
+console.log(selectColor(11)); // bord
 console.log(selectColor(6)); // mavi
 console.log(selectColor(-1)); // Geçersiz sayı
