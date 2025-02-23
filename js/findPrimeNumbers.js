@@ -25,28 +25,6 @@ Input: 100
 Output: 101 + 97
 */
 
-/*
-function asalCheck(num){
-    let sayac=0;
-    // Girilen sayının pozitif ve 1 den büyük olması
-    // gerektiği için if kontrolunu yapıyoruz
-    if(num>2) 
-    {
-        for(let i=num; i>2; i--){
-            if( num%(i-1) === 0 ){
-                sayac ++;
-                break;
-            }
-        }
-        if(sayac>0) console.log("asal degil")
-        else console.log("asal");    
-    }
-    else if(num === 2) console.log("asal"); 
-    else console.log("dogru deger girin");
-    
-}
-*/
-
 // Asal sayı kontrol 
 function asalCheck(num) {
     if (num < 2) return false;
