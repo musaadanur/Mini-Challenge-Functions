@@ -11,7 +11,7 @@ console.log(person.name+" "+person.age);
 person nesnesine bir city özelliği ekleyin 
 ve güncellenmiş nesneyi loglayın.
 */
-person.city = "trabzon";
+person.city = "trabzon"; // ama bu yontemi tercih etme
 console.log(person.city);
 
 /*
