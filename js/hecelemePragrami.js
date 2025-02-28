@@ -10,37 +10,40 @@ icin sesli harflere dikkat etmelisiniz.
 */// unluHarfler = ['a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü'];
 
 
+// Sesli harf olup olmadığını kontrol eden fonksiyon
 const sesliMi = harf => ['a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü'].includes(harf);
 
 function hecele(kelime) {
-  let sonuc = '';
-  let i = 0;
+  let sonuc = ''; // Hecelenmiş kelimeyi saklayacak değişken
+  let i = 0; // Döngü sayacı
 
   while (i < kelime.length) {
-    const harf = kelime[i];
-    sonuc += harf;
+    const harf = kelime[i]; 
+    sonuc += harf; // Harfi sonuca ekle
 
+    // Eğer harf sesli ise kontrol et
     if (sesliMi(harf)) {
-      const sonraki = kelime[i + 1];
-      const diger = kelime[i + 2];
+      const sonraki = kelime[i + 1]; // Bir sonraki harf
+      const diger = kelime[i + 2]; // İki sonraki harf
 
+      // Eğer iki ünsüz yan yana gelirse, ilkini önceki heceye, ikincisini sonraki heceye ekle
       if (sonraki && diger && !sesliMi(sonraki) && !sesliMi(diger)) {
-        sonuc += sonraki + '-';
-        i++;
+        sonuc += sonraki + '-'; // İlk ünsüzü ekleyip heceyi ayır
+        i++; // Bir adım ileri git
       } else {
-        sonuc += '-';
+        sonuc += '-'; // Normal heceleme
       }
     }
 
-    i++;
+    i++; // Bir sonraki harfe geç
   }
 
+  // Eğer son karakter '-' ise, onu kaldır
   return sonuc.endsWith('-') ? sonuc.slice(0, -1) : sonuc;
 }
 
 console.log(hecele('patika')); // pa-ti-ka
-console.log(hecele('konstruksiyon')); // kon-struk-si-yon
-console.log(hecele('korkunç')); // kor-kunç
+
 
 
 
