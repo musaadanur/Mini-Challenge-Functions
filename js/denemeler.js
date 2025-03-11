@@ -125,5 +125,3 @@ for (const [key, value] of Object.entries(kullanici61)) {
 // yas 25
 // ulke ABD
 
-
-
